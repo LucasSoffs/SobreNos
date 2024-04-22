@@ -1,0 +1,41 @@
+.main_conteiner {
+    width: 100%;
+    min-height: 675px;
+    background-color: rgb(255, 255, 255);
+    background-image: url();
+    background-repeat: no-repeat;
+}
+
+.conteiner1 {
+    width: 50%;
+    min-height: 675px;
+    background-color: rgb(255, 255, 255);
+    float: left;
+}
+
+.conteiner2 {
+    width: 50%;
+    min-height: 675px;
+    background-color: rgb(255, 255, 255);
+    float: right;
+    background-image: url(NossaFoto.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.box {
+    width: 675px;
+    position: absolute;
+    left: 26%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p {
+    text-align: justify;
+    text-indent: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 550;
+    font-style: italic;
+}

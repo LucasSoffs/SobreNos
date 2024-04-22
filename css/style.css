@@ -1,0 +1,222 @@
+#slider {
+    margin: 0 auto;
+    width: 927px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  #slider input[type=radio] {
+    display: none;
+  }
+
+  #slider label {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  #slides {
+    padding: 10px;
+    border: 3px solid #ccc;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+  }
+
+  #overflow {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #slide1:checked~#slides .inner {
+    margin-left: 0;
+  }
+
+  #slide2:checked~#slides .inner {
+    margin-left: -100%;
+  }
+
+  #slide3:checked~#slides .inner {
+    margin-left: -200%;
+  }
+
+  #slide4:checked~#slides .inner {
+    margin-left: -300%;
+  }
+
+  #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 300px;
+  }
+
+  #slides .slide {
+    width: 25%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+  }
+
+  #slides .slide_1 {
+    background-image: url("https://blog.connectplug.com.br/wp-content/uploads/2018/01/como-decorar-uma-loja-de-roupas-e1522869386918.jpg ");
+  }
+
+  #slides .slide_2 {
+    background-image: url("https://conteudo.imguol.com.br/c/entretenimento/70/2023/07/07/arte-promocao-tenis-1688756510868_v2_900x506.jpg");
+  }
+
+  #slides .slide_3 {
+    background-image: url("https://img.freepik.com/fotos-gratis/roupas-multicoloridas-penduradas-em-cabides-em-lojas-de-varejo-geradas-por-ia_188544-19853.jpg");
+  }
+
+  #slides .slide_4 {
+    background-image: url("roupas_amarelas.jpg");
+  }
+
+  #controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+  }
+
+  #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+  }
+
+  #controls label:hover {
+    opacity: 1;
+  }
+
+  #slide1:checked~#controls label:nth-child(2),
+  #slide2:checked~#controls label:nth-child(3),
+  #slide3:checked~#controls label:nth-child(4),
+  #slide4:checked~#controls label:nth-child(1) {
+    background: url(https://cdn-icons-png.flaticon.com/512/467/467282.png ) no-repeat;
+    float: right;
+    margin: 0 -50px 0 0;
+    display: block;
+  }
+
+  #slide1:checked~#controls label:nth-last-child(2),
+  #slide2:checked~#controls label:nth-last-child(3),
+  #slide3:checked~#controls label:nth-last-child(4),
+  #slide4:checked~#controls label:nth-last-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float: left;
+    margin: 0 0 0 -50px;
+    display: block;
+  }
+
+  #bullets {
+    margin: 150px 0 0;
+    text-align: center;
+  }
+
+  #bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #ccc;
+    margin: 0 10px;
+  }
+
+  #slide1:checked~#bullets label:nth-child(1),
+  #slide2:checked~#bullets label:nth-child(2),
+  #slide3:checked~#bullets label:nth-child(3),
+  #slide4:checked~#bullets label:nth-child(4) {
+    background: #444;
+  }
+
+  @media screen and (max-width: 900px) {
+
+    #slide1:checked~#controls label:nth-child(2),
+    #slide2:checked~#controls label:nth-child(3),
+    #slide3:checked~#controls label:nth-child(4),
+    #slide4:checked~#controls label:nth-child(1),
+    #slide1:checked~#controls label:nth-last-child(2),
+    #slide2:checked~#controls label:nth-last-child(3),
+    #slide3:checked~#controls label:nth-last-child(4),
+    #slide4:checked~#controls label:nth-last-child(1) {
+      margin: 0;
+    }
+
+    #slides {
+      max-width: calc(100% - 140px);
+      margin: 0 auto;
+    }
+  }
+
+
+
+
+
+
+
+  .main_conteiner {
+    width: 92%;
+    min-height: 675px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+  }
+
+  .logo {
+      flex: 0.4;
+      /* Ocupará o espaço de 1 parte */
+      background-image: url("AtenasLogo.jpg");
+      /* Background-Image - Imagem de Fundo */
+      background-repeat: no-repeat;
+      /* Repetição de Background */
+      background-position: center center;
+      /* Posição do Background */
+      background-size: 30%;
+    }
+
+  
+  .Container-card-1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 2rem;
+
+  }
+
+
+  .Container-card-2 {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 2rem;
+
+  }
+
+  .cards img {
+    width: 700x;
+    height: auto;
+    transition: 0.35s ease;
+
+  }
+
+  .cards img:hover {
+    transform: scale(0.9) translateY(-5px);
+    cursor: pointer;
+
+
+  }
+
+  .Marcas img{
+  width: 260px;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+}
